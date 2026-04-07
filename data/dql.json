@@ -1,0 +1,52 @@
+[
+  {
+    "question": "1. Display all columns of the EMP table.",
+    "query": "SELECT * FROM EMP;",
+    "output": "EMPNO | ENAME  | JOB       | MGR  | HIREDATE  | SAL  | COMM | DEPTNO\n-----------------------------------------------------------------------\n7369  | SMITH  | CLERK     | 7902 | 17-DEC-80 | 800  |      | 20\n7499  | ALLEN  | SALESMAN  | 7698 | 20-FEB-81 | 1600 | 300  | 30\n7521  | WARD   | SALESMAN  | 7698 | 22-FEB-81 | 1250 | 500  | 30\n... (Total 14 rows)"
+  },
+  {
+    "question": "2. Display EMPNO, ENAME, and SAL of all employees from the EMP table.",
+    "query": "SELECT EMPNO, ENAME, SAL FROM EMP;",
+    "output": "EMPNO | ENAME  | SAL\n---------------------\n7369  | SMITH  | 800\n7499  | ALLEN  | 1600\n7521  | WARD   | 1250\n7566  | JONES  | 2975"
+  },
+  {
+    "question": "3. Display unique job titles from the EMP table.",
+    "query": "SELECT DISTINCT JOB FROM EMP;",
+    "output": "JOB\n---------\nCLERK\nSALESMAN\nPRESIDENT\nMANAGER\nANALYST"
+  },
+  {
+    "question": "4. Display employee names along with their department numbers from the EMP table.",
+    "query": "SELECT ENAME, DEPTNO FROM EMP;",
+    "output": "ENAME  | DEPTNO\n---------------\nSMITH  | 20\nALLEN  | 30\nWARD   | 30\nJONES  | 20"
+  },
+  {
+    "question": "5. Display all department details from the DEPT table.",
+    "query": "SELECT * FROM DEPT;",
+    "output": "DEPTNO | DNAME      | LOC\n---------------------------\n10     | ACCOUNTING | NEW YORK\n20     | RESEARCH   | DALLAS\n30     | SALES      | CHICAGO\n40     | OPERATIONS | BOSTON"
+  },
+  {
+    "question": "6. Display distinct department numbers from the EMP table.",
+    "query": "SELECT DISTINCT DEPTNO FROM EMP;",
+    "output": "DEPTNO\n------\n10\n20\n30"
+  },
+  {
+    "question": "7. Display employee name and annual salary (SAL × 12) from the EMP table.",
+    "query": "SELECT ENAME, SAL * 12 AS ANNUAL_SALARY FROM EMP;",
+    "output": "ENAME  | ANNUAL_SALARY\n----------------------\nSMITH  | 9600\nALLEN  | 19200\nWARD   | 15000\nJONES  | 35700"
+  },
+  {
+    "question": "8. Display employee name, salary, and commission from the EMP table.",
+    "query": "SELECT ENAME, SAL, COMM FROM EMP;",
+    "output": "ENAME  | SAL  | COMM\n--------------------\nSMITH  | 800  |\nALLEN  | 1600 | 300\nWARD   | 1250 | 500\nMARTIN | 1250 | 1400"
+  },
+  {
+    "question": "9. Display job and salary of all employees from the EMP table.",
+    "query": "SELECT JOB, SAL FROM EMP;",
+    "output": "JOB       | SAL\n----------------\nCLERK     | 800\nSALESMAN  | 1600\nSALESMAN  | 1250\nMANAGER   | 2975"
+  },
+  {
+    "question": "10. Display employees along with their manager numbers from the EMP table.",
+    "query": "SELECT ENAME, MGR FROM EMP;",
+    "output": "ENAME  | MGR\n------------\nSMITH  | 7902\nALLEN  | 7698\nWARD   | 7698\nKING   | "
+  }
+]

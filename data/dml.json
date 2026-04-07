@@ -1,0 +1,152 @@
+[
+  {
+    "question": "1. Insert a record into STUDENT table with values: SID = 101, SNAME = 'RAHUL', AGE = 20, COURSE = 'MCA'.",
+    "query": "INSERT INTO STUDENT (SID, SNAME, AGE, COURSE) \nVALUES (101, 'RAHUL', 20, 'MCA');",
+    "output": "1 row created."
+  },
+  {
+    "question": "2. Insert a record into EMPLOYEE table with EID = 201, ENAME = 'ANITA', SALARY = 45000, DEPTNO = 10.",
+    "query": "INSERT INTO EMPLOYEE (EID, ENAME, SALARY, DEPTNO) \nVALUES (201, 'ANITA', 45000, 10);",
+    "output": "1 row created."
+  },
+  {
+    "question": "3. Insert a new department into DEPT table; DEPTNO = 50, DNAME = 'TRAINING', LOC = 'DELHI'.",
+    "query": "INSERT INTO DEPT (DEPTNO, DNAME, LOC) \nVALUES (50, 'TRAINING', 'DELHI');",
+    "output": "1 row created."
+  },
+  {
+    "question": "4. Insert a record into BOOK table with only BOOK_ID, TITLE, and PRICE.",
+    "query": "INSERT INTO BOOK (BOOK_ID, TITLE, PRICE) \nVALUES (501, 'SQL Guide', 450);",
+    "output": "1 row created."
+  },
+  {
+    "question": "5. Insert multiple rows into COURSE table.",
+    "query": "INSERT ALL \n  INTO COURSE (CID, CNAME) VALUES (1, 'Java')\n  INTO COURSE (CID, CNAME) VALUES (2, 'Python')\nSELECT * FROM dual;",
+    "output": "2 rows created."
+  },
+  {
+    "question": "6. Insert data into EMP_COPY table from the EMP table.",
+    "query": "INSERT INTO EMP_COPY \nSELECT * FROM EMP;",
+    "output": "14 rows created."
+  },
+  {
+    "question": "7. Insert employees from EMP whose salary is greater than 3000 into EMP_HIGH_SAL.",
+    "query": "INSERT INTO EMP_HIGH_SAL \nSELECT * FROM EMP WHERE SAL > 3000;",
+    "output": "3 rows created."
+  },
+  {
+    "question": "8. Insert employees hired after 1981 into EMP_NEW_HIRE.",
+    "query": "INSERT INTO EMP_NEW_HIRE \nSELECT * FROM EMP \nWHERE HIREDATE > TO_DATE('31-DEC-1981','DD-MON-YYYY');",
+    "output": "Row(s) created."
+  },
+  {
+    "question": "9. Insert department numbers and names from DEPT into a table called DEPT_BACKUP.",
+    "query": "INSERT INTO DEPT_BACKUP (DEPTNO, DNAME) \nSELECT DEPTNO, DNAME FROM DEPT;",
+    "output": "4 rows created."
+  },
+  {
+    "question": "10. Insert employee names and salaries into a table EMP_SALARY_RECORD.",
+    "query": "INSERT INTO EMP_SALARY_RECORD (ENAME, SAL) \nSELECT ENAME, SAL FROM EMP;",
+    "output": "14 rows created."
+  },
+  {
+    "question": "11. Update the salary of employee SMITH to 2000.",
+    "query": "UPDATE EMP \nSET SAL = 2000 \nWHERE ENAME = 'SMITH';",
+    "output": "1 row updated."
+  },
+  {
+    "question": "12. Increase salary of all employees by 10%.",
+    "query": "UPDATE EMP \nSET SAL = SAL * 1.10;",
+    "output": "14 rows updated."
+  },
+  {
+    "question": "13. Update the department number of employee ALLEN to 20.",
+    "query": "UPDATE EMP \nSET DEPTNO = 20 \nWHERE ENAME = 'ALLEN';",
+    "output": "1 row updated."
+  },
+  {
+    "question": "14. Update commission of SALESMAN to 500.",
+    "query": "UPDATE EMP \nSET COMM = 500 \nWHERE JOB = 'SALESMAN';",
+    "output": "4 rows updated."
+  },
+  {
+    "question": "15. Update job of employee MILLER to MANAGER.",
+    "query": "UPDATE EMP \nSET JOB = 'MANAGER' \nWHERE ENAME = 'MILLER';",
+    "output": "1 row updated."
+  },
+  {
+    "question": "16. Increase salary of employees in department 10 by 20%.",
+    "query": "UPDATE EMP \nSET SAL = SAL * 1.20 \nWHERE DEPTNO = 10;",
+    "output": "3 rows updated."
+  },
+  {
+    "question": "17. Update salary of employees whose job is CLERK to 1500.",
+    "query": "UPDATE EMP \nSET SAL = 1500 \nWHERE JOB = 'CLERK';",
+    "output": "4 rows updated."
+  },
+  {
+    "question": "18. Update location of department 30 to MUMBAI.",
+    "query": "UPDATE DEPT \nSET LOC = 'MUMBAI' \nWHERE DEPTNO = 30;",
+    "output": "1 row updated."
+  },
+  {
+    "question": "19. Update commission of employees who have NULL commission to 100.",
+    "query": "UPDATE EMP \nSET COMM = 100 \nWHERE COMM IS NULL;",
+    "output": "10 rows updated."
+  },
+  {
+    "question": "20. Update salary of employees who earn less than average salary.",
+    "query": "UPDATE EMP \nSET SAL = SAL + 500 \nWHERE SAL < (SELECT AVG(SAL) FROM EMP);",
+    "output": "Row(s) updated."
+  },
+  {
+    "question": "21. Delete employee SMITH from EMP table.",
+    "query": "DELETE FROM EMP \nWHERE ENAME = 'SMITH';",
+    "output": "1 row deleted."
+  },
+  {
+    "question": "22. Delete all employees working in department 30.",
+    "query": "DELETE FROM EMP \nWHERE DEPTNO = 30;",
+    "output": "6 rows deleted."
+  },
+  {
+    "question": "23. Delete employees whose salary is less than 1000.",
+    "query": "DELETE FROM EMP \nWHERE SAL < 1000;",
+    "output": "Row(s) deleted."
+  },
+  {
+    "question": "24. Delete employees hired before 1981.",
+    "query": "DELETE FROM EMP \nWHERE HIREDATE < TO_DATE('01-JAN-1981','DD-MON-YYYY');",
+    "output": "Row(s) deleted."
+  },
+  {
+    "question": "25. Delete employees who do not receive commission.",
+    "query": "DELETE FROM EMP \nWHERE COMM IS NULL OR COMM = 0;",
+    "output": "Row(s) deleted."
+  },
+  {
+    "question": "26. Delete departments located in CHICAGO.",
+    "query": "DELETE FROM DEPT \nWHERE LOC = 'CHICAGO';",
+    "output": "1 row deleted."
+  },
+  {
+    "question": "27. Delete employees whose job is CLERK.",
+    "query": "DELETE FROM EMP \nWHERE JOB = 'CLERK';",
+    "output": "4 rows deleted."
+  },
+  {
+    "question": "28. Delete employees earning the minimum salary.",
+    "query": "DELETE FROM EMP \nWHERE SAL = (SELECT MIN(SAL) FROM EMP);",
+    "output": "1 row deleted."
+  },
+  {
+    "question": "29. Delete employees working in departments located in NEW YORK.",
+    "query": "DELETE FROM EMP \nWHERE DEPTNO IN (SELECT DEPTNO FROM DEPT WHERE LOC = 'NEW YORK');",
+    "output": "3 rows deleted."
+  },
+  {
+    "question": "30. Delete employees whose manager number is NULL.",
+    "query": "DELETE FROM EMP \nWHERE MGR IS NULL;",
+    "output": "1 row deleted."
+  }
+]
