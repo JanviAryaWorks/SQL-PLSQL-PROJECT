@@ -1,106 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oracle SQL & PL/SQL Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <title>SQLMaster | DBMS Portfolio</title>
 </head>
+
 <body>
+
     <nav class="navbar">
-        <div class="logo">SQL<span>Master</span></div>
+        <div class="logo">Janvi Arya Works</div>
         <div class="nav-links">
             <a href="index.html" class="active">Home</a>
             <a href="about.html">About Project</a>
         </div>
     </nav>
 
-    <header class="hero">
-        <h1>DBMS Practice Portal</h1>
-        <p>Explore 500+ SQL & PL/SQL problems across all major database concepts.</p>
-    </header>
+    <main class="main-content">
+        <header class="page-header">
+            <h1>Oracle SQL & PL/SQL</h1>
+        </header>
 
-    <div class="container grid-layout">
-        <a href="queries.html?cat=DDL&count=50" class="topic-card sql">
-            <div class="card-body"><h3>1. DDL Commands</h3><p>Create, Alter, Drop, Truncate (1-50)</p></div>
-            <div class="progress-line"></div>
-        </a>
+        <div class="category-grid">
+            <a href="queries.html?cat=DDL&count=41" class="category-card">
+                <h3>1. DDL Commands </h3>
+                <p>Create, Alter, Drop & Truncate</p>
+            </a>
 
-        <a href="queries.html?cat=DML&count=30" class="topic-card sql">
-            <div class="card-body"><h3>2. DML Commands</h3><p>Insert, Update, Delete (1-30)</p></div>
-            <div class="progress-line"></div>
-        </a>
+            <a href="queries.html?cat=DML&count=30" class="category-card">
+                <h3>2. DML Commands</h3>
+                <p>Insert, Update & Delete</p>
+            </a>
 
-        <a href="queries.html?cat=DQL&count=10" class="topic-card sql">
-            <div class="card-body"><h3>3. DQL Fundamentals</h3><p>Basic Select Queries (1-10)</p></div>
-            <div class="progress-line"></div>
-        </a>
+            <a href="queries.html?cat=DQL&count=10" class="category-card">
+                <h3>3. DQL Fundamentals</h3>
+                <p>Basic Data Retrieval</p>
+            </a>
 
-        <a href="queries.html?cat=WHERE_ORDER&count=54" class="topic-card sql">
-            <div class="card-body"><h3>4. Filtering & Sorting</h3><p>WHERE, ORDER BY, ALIAS (1-54)</p></div>
-            <div class="progress-line"></div>
-        </a>
+            <a href="queries.html?cat=WHERE&count=45" class="category-card">
+                <h3>4. Filtering & Sorting</h3>
+                <p>WHERE, ORDER BY & Aliases</p>
+            </a>
 
-        <a href="queries.html?cat=LIKE&count=60" class="topic-card sql">
-            <div class="card-body"><h3>5. Pattern Matching</h3><p>LIKE Operator & Wildcards (1-60)</p></div>
-            <div class="progress-line"></div>
-        </a>
+            <a href="queries.html?cat=LIKE&count=35" class="category-card">
+                <h3>5. Pattern Matching</h3>
+                <p>LIKE Operator & Wildcards</p>
+            </a>
 
-        <a href="queries.html?cat=GROUP_BY&count=69" class="topic-card sql">
-            <div class="card-body"><h3>6. Aggregation</h3><p>Group Functions & HAVING (1-69)</p></div>
-            <div class="progress-line"></div>
-        </a>
+            <a href="queries.html?cat=GROUP_BY&count=60" class="category-card">
+                <h3>6. Group Functions</h3>
+                <p>SUM, AVG, GROUP BY & HAVING</p>
+            </a>
 
-        <a href="queries.html?cat=SUBQUERIES&count=69" class="topic-card sql">
-            <div class="card-body"><h3>7. Subqueries</h3><p>Single, Multi & Correlated (1-69)</p></div>
-            <div class="progress-line"></div>
-        </a>
+            <a href="queries.html?cat=SUBQUERIES&count=35" class="category-card">
+                <h3>7. Sub-Queries</h3>
+                <p>Nested & Correlated Queries</p>
+            </a>
 
-        <a href="queries.html?cat=SCALAR&count=60" class="topic-card sql">
-            <div class="card-body"><h3>8. Scalar Functions</h3><p>Date, String, Numeric (1-60)</p></div>
-            <div class="progress-line"></div>
-        </a>
+            <a href="queries.html?cat=SCALAR&count=21" class="category-card">
+                <h3>8. Scalar Functions</h3>
+                <p>String, Date & Numeric Functions</p>
+            </a>
 
-        <a href="queries.html?cat=JOINS&count=40" class="topic-card sql">
-            <div class="card-body"><h3>9. Table Joins</h3><p>Inner, Outer, Self, Cartesian (1-40)</p></div>
-            <div class="progress-line"></div>
-        </a>
+            <a href="queries.html?cat=JOINS&count=20" class="category-card">
+                <h3>9. Table Joins</h3>
+                <p>Inner, Outer & Self Joins</p>
+            </a>
 
-        <a href="queries.html?cat=SET&count=25" class="topic-card sql">
-            <div class="card-body"><h3>10. SET Operators</h3><p>Union, Intersect, Minus (1-25)</p></div>
-            <div class="progress-line"></div>
-        </a>
+            <a href="queries.html?cat=SET&count=25" class="category-card">
+                <h3>10. SET Operators</h3>
+                <p>UNION, INTERSECT & MINUS</p>
+            </a>
 
-        <a href="queries.html?cat=VIEWS&count=35" class="topic-card sql">
-            <div class="card-body"><h3>11. Views</h3><p>Simple & Materialized (1-35)</p></div>
-            <div class="progress-line"></div>
-        </a>
+            <a href="queries.html?cat=VIEWS&count=10" class="category-card">
+                <h3>11. Views </h3>
+                <p>Virtual Tables & Security</p>
+            </a>
 
-        <a href="queries.html?cat=DCL_TCL&count=35" class="topic-card sql">
-            <div class="card-body"><h3>12. DCL & TCL</h3><p>Grant, Revoke, Commit, Rollback (1-35)</p></div>
-            <div class="progress-line"></div>
-        </a>
+            <a href="queries.html?cat=PLSQL_BASICS&count=22" class="category-card plsql-card">
+                <h3>12. PL/SQL Basics</h3>
+                <p>Variables, Constants & Output</p>
+            </a>
 
-        <a href="queries.html?cat=PLSQL_BASICS&count=22" class="topic-card plsql">
-            <div class="card-body"><h3>13. PL/SQL Basics</h3><p>Output, Variables, Constants (1-22)</p></div>
-            <div class="progress-line"></div>
-        </a>
+            <a href="queries.html?cat=DECISION&count=18" class="category-card plsql-card">
+                <h3>13. Decision Control</h3>
+                <p>IF-ELSE & CASE Logic</p>
+            </a>
 
-        <a href="queries.html?cat=DECISION&count=31" class="topic-card plsql">
-            <div class="card-body"><h3>14. Decision Control</h3><p>IF, CASE, EXIT (1-31)</p></div>
-            <div class="progress-line"></div>
-        </a>
+            <a href="queries.html?cat=ITERATIVE&count=21" class="category-card plsql-card">
+                <h3>14. Iterative Control</h3>
+                <p>Simple, WHILE & FOR Loops</p>
+            </a>
 
-        <a href="queries.html?cat=ITERATIVE&count=32" class="topic-card plsql">
-            <div class="card-body"><h3>15. Iterative Control</h3><p>Loops (Simple, While, For) (1-32)</p></div>
-            <div class="progress-line"></div>
-        </a>
+            <a href="queries.html?cat=DATA_RETRIEVAL&count=17" class="category-card">
+                <h3>15. PLSQL: SELECT, %TYPE AND %ROWTYPE</h3>
+                <p>SELECT INTO, %TYPE & %ROWTYPE</p>
+            </a>
 
-        <a href="queries.html?cat=DATA_RETRIEVAL&count=17" class="topic-card plsql">
-            <div class="card-body"><h3>16. Data Retrieval</h3><p>SELECT INTO, %TYPE (1-17)</p></div>
-            <div class="progress-line"></div>
-        </a>
-    </div>
+            <a href="queries.html?cat=CURSORS&count=24" class="category-card">
+                <h3>16. Explicit Cursors</h3>
+                <p>Open, Fetch, Close & For Update</p>
+            </a>
+
+            <a href="queries.html?cat=PROCEDURES&count=20" class="category-card">
+                <h3>17. Stored Modules</h3>
+                <p>Procedures & Functions </p>
+            </a>
+
+            <a href="queries.html?cat=PACKAGES&count=9" class="category-card plsql-card">
+                <h3>18. PL/SQL Packages</h3>
+                <p>Encapsulation & State </p>
+            </a>
+
+            <a href="queries.html?cat=EXCEPTIONS&count=12" class="category-card plsql-card">
+                <h3>19. Exception Handling</h3>
+                <p>Runtime Errors & RAISE </p>
+            </a>
+
+            <a href="queries.html?cat=TRIGGERS&count=13" class="category-card plsql-card">
+                <h3>20. Database Triggers</h3>
+                <p>Before, After & Row-Level Events </p>
+            </a>
+        </div>
+    </main>
+
 </body>
+
 </html>
