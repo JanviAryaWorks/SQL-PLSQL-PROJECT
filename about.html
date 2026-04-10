@@ -2,33 +2,147 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
-    <title>About Project | SQLMaster</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Project | Oracle SQL Mastery</title>
+    
+    <style>
+        :root {
+            --primary-color: #f3e8ff;
+            --primary-color-dark: #3498db;
+            --border-color: #e5e7eb;
+            --text-main: #1f2937;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f9fafb;
+            margin: 0;
+            color: var(--text-main);
+        }
+
+        .main-content {
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .category-card {
+            background: white;
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            max-width: 700px;
+            width: 100%;
+            padding: 50px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+
+        .badge-label {
+            background-color: var(--primary-color);
+            color: var(--primary-color-dark);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 1.2px;
+            display: inline-block;
+            margin-bottom: 25px;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            color: #111;
+            margin: 0 0 10px 0;
+        }
+
+        .sub-text {
+            color: #6b7280;
+            font-size: 1rem;
+            margin-bottom: 45px;
+        }
+
+        .intro-details-card {
+            background-color: #ffffff;
+            border: 1.5px solid #f3f4f6;
+            border-radius: 24px;
+            padding: 10px 30px;
+        }
+
+        .detail-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 0;
+            border-bottom: 1px solid #f3f4f6;
+        }
+
+        .detail-item:last-child {
+            border-bottom: none;
+        }
+
+        .label {
+            color: #9ca3af;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .value {
+            color: var(--primary-color-dark);
+            font-weight: 600;
+            font-size: 1.05rem;
+        }
+
+        /* Navbar Style (Optional, if you want it here too) */
+        .navbar {
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            background: white;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .logo { font-weight: bold; color: var(--primary-color-dark); }
+        .nav-links a { text-decoration: none; color: #666; margin-left: 20px; font-size: 0.9rem; }
+    </style>
 </head>
 <body>
+
     <nav class="navbar">
-        <div class="logo">SQL<span>Master</span></div>
-        <div class="nav-links"><a href="index.html">Home</a></div>
+        <div class="logo">Janvi Arya Works</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html" style="color: var(--primary-color-dark); font-weight: 600;">About Project</a>
+        </div>
     </nav>
 
-    <div class="container" style="max-width: 800px; margin-top: 50px; background: white; padding: 40px; border-radius: 15px; border: 1px solid #e2e8f0;">
-        <h1 style="color: var(--accent);">About This Portfolio</h1>
-        <p>This project is a digital repository of <strong>500+ Database Management System</strong> problems. It covers the entire spectrum of SQL and PL/SQL, from basic data retrieval to complex procedural logic.</p>
-        
-        <div style="margin-top: 30px;">
-            <h3>Key Features:</h3>
-            <ul>
-                <li><strong>Interactive Sidebar:</strong> Easy navigation through 17+ categories.</li>
-                <li><strong>Real-time View:</strong> Instant access to SQL code and its Oracle output.</li>
-                <li><strong>Categorized Learning:</strong> Separate sections for DDL, DML, Joins, and PL/SQL.</li>
-            </ul>
-        </div>
+    <main class="main-content">
+        <div class="category-card">
+            
+            
+            <h1>DBMS Practical Implementation</h1>
+            <p class="sub-text">Assignment record for Oracle SQL and PL/SQL implementation.</p>
 
-        <div style="margin-top: 30px; padding: 20px; background: #fff7ed; border-radius: 8px;">
-            <p><strong>Developed By:</strong> [Your Name]</p>
-            <p><strong>Database Used:</strong> Oracle SQL & PL/SQL</p>
-            <p><strong>Tech Stack:</strong> HTML5, CSS3, JavaScript (JSON Data Handling)</p>
+            <div class="intro-details-card">
+                <div class="detail-item">
+                    <span class="label">STUDENT NAME</span>
+                    <span class="value">Janvi Arya</span>
+                </div>
+                <div class="detail-item">
+                    <span class="label">ROLL NUMBER</span>
+                    <span class="value">7010/24</span>
+                </div>
+                <div class="detail-item">
+                    <span class="label">CLASS & SEM</span>
+                    <span class="value">BCA - 4th Semester</span>
+                </div>
+                <div class="detail-item">
+                    <span class="label">SUBJECT</span>
+                    <span class="value">DBMS (Oracle SQL)</span>
+                </div>
+            </div>
         </div>
-    </div>
+    </main>
+
 </body>
 </html>
