@@ -1,207 +1,211 @@
 :root {
-    --bg-light: #f8fafc;
-    --card-white: #ffffff;
-    --text-dark: #1e293b;
-    --text-muted: #64748b;
-    --accent: #f97316; /* Professional Orange */
-    --border: #e2e8f0;
+    --primary-color: #2c3e50;  /* Dark Blue-Grey */
+    --accent-color: #3498db;   /* Professional Blue */
+    --bg-color: #fdfdfd;
+    --border-color: #eeeeee;
+    --text-muted: #777777;
 }
-
-* { box-sizing: border-box; }
 
 body {
-    font-family: 'Inter', sans-serif;
-    background-color: var(--bg-light);
-    color: var(--text-dark);
+    background-color: var(--bg-color);
+    color: #333;
+    font-family: 'Segoe UI', Arial, sans-serif;
     margin: 0;
+    padding: 0;
+    line-height: 1.6;
 }
 
-/* Navbar */
+/* --- NAVIGATION --- */
 .navbar {
+    background: #ffffff;
+    padding: 15px 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 8%;
-    background: white;
-    border-bottom: 1px solid var(--border);
-    position: sticky;
-    top: 0;
-    z-index: 100;
+    border-bottom: 1px solid var(--border-color);
 }
 
-.logo { font-size: 1.5rem; font-weight: 700; color: #334155; }
-.logo span { color: var(--accent); }
+.logo {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
 
 .nav-links a {
     text-decoration: none;
-    color: var(--text-dark);
-    margin-left: 20px;
-    font-weight: 500;
-    font-size: 0.95rem;
+    color: #555;
+    margin-left: 25px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: color 0.2s;
 }
 
-.nav-links a.active { color: var(--accent); }
+.nav-links a:hover, .nav-links a.active {
+    color: var(--accent-color);
+}
 
-/* Hero Section */
-.hero {
+/* --- MAIN CONTENT --- */
+.main-content {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.page-header {
     text-align: center;
-    padding: 80px 20px;
-    max-width: 800px;
-    margin: 0 auto;
+    margin-bottom: 60px;
 }
 
-.hero h1 { font-size: 2.2rem; color: #475569; margin-bottom: 20px; }
-.hero p { font-size: 1.1rem; color: var(--text-muted); line-height: 1.6; }
+.page-header h1 {
+    font-size: 2.4rem;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
 
-/* Grid Layout */
-.grid-layout {
+.page-header p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+}
+
+/* --- CATEGORY GRID --- */
+.category-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 25px;
-    padding: 0 8% 50px 8%;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
 }
 
-/* Topic Card */
-.topic-card {
-    background: var(--card-white);
-    border: 1px solid var(--border);
+/* --- CATEGORY CARD --- */
+.category-card {
+    background: #ffffff;
+    padding: 30px;
+    border: 1px solid var(--border-color);
     border-radius: 12px;
     text-decoration: none;
-    color: inherit;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    transition: all 0.3s ease;
-    overflow: hidden;
-    position: relative;
+    color: #333;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    display: block;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.02);
 }
 
-.topic-card:hover {
+/* Subtle Hover Effect */
+.category-card:hover {
+    border-color: var(--accent-color);
     transform: translateY(-5px);
-    border-color: var(--accent);
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
 }
 
-.card-body { padding: 30px; }
-.card-body h3 { margin: 0 0 10px 0; font-size: 1.1rem; color: #334155; }
-.card-body p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
-
-.card-footer {
-    padding: 15px 30px;
-    background: #fcfcfc;
-    border-top: 1px solid #f1f5f9;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.category-card h3 {
+    margin: 0 0 10px 0;
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    font-weight: 700;
 }
 
-.status { font-size: 0.8rem; color: #94a3b8; font-weight: 500; }
-.arrow { font-size: 0.9rem; color: var(--accent); font-weight: 600; }
-
-.progress-line {
-    height: 4px;
-    background: #f1f5f9;
-    width: 100%;
+.category-card p {
+    margin: 0;
+    font-size: 0.85rem;
+    color: var(--text-muted);
 }
 
-.topic-card:hover .progress-line {
-    background: var(--accent);
-}
-
-/* Split Container */
-.split-container {
+/* --- QUERIES PAGE LAYOUT --- */
+.practice-container {
     display: flex;
     height: calc(100vh - 70px);
-    overflow: hidden;
 }
 
 .sidebar {
-    width: 350px;
-    background: white;
-    border-right: 1px solid var(--border);
-    display: flex;
-    flex-direction: column;
-}
-
-.sidebar-header { padding: 20px; border-bottom: 1px solid var(--border); }
-.sidebar-header h4 { margin: 0; color: #1e293b; }
-.sidebar-header p { font-size: 0.8rem; color: var(--text-muted); margin: 5px 0 0; }
-
-.query-list { overflow-y: auto; flex: 1; }
-
-.content-area {
-    flex: 1;
-    background: #f1f5f9;
-    padding: 40px;
+    width: 300px;
+    background: #f8f9fa;
+    border-right: 1px solid var(--border-color);
+    padding: 25px;
     overflow-y: auto;
 }
 
-/* Detail Styling */
-.detail-container { max-width: 900px; margin: 0 auto; }
-.question-box { background: white; padding: 30px; border-radius: 12px; margin-bottom: 25px; border-left: 5px solid var(--accent); }
-.label { font-size: 0.7rem; font-weight: 700; color: var(--accent); letter-spacing: 1px; }
-
-.code-wrapper, .output-wrapper {
-    background: #1e293b;
-    border-radius: 12px;
-    margin-bottom: 25px;
-    overflow: hidden;
+.group-header {
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 0.75rem;
+    margin-top: 25px;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-.panel-header {
-    background: #334155;
-    color: #cbd5e1;
-    padding: 10px 20px;
-    font-size: 0.8rem;
-    display: flex;
-    justify-content: space-between;
+#problemList {
+    list-style: none;
+    padding: 0;
 }
 
-.code-wrapper pre {
-    padding: 20px;
-    margin: 0;
-    color: #f8fafc;
-    font-family: 'Fira Code', monospace;
-    overflow-x: auto;
+#problemList li {
+    padding: 8px 12px;
+    font-size: 0.85rem;
+    color: #555;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: all 0.2s;
 }
 
-.output-screen {
-    padding: 20px;
-    background: #0f172a;
-    color: #4ade80; /* Green terminal look */
-    font-family: monospace;
-    white-space: pre;
-}
-
-.hidden { display: none; }
-.empty-state { text-align: center; margin-top: 100px; color: var(--text-muted); }
-
-
-/* topic-card.sql styles */
-.topic-card.sql:hover .progress-line { background: #3b82f6; } /* Blue for SQL */
-.topic-card.sql .arrow { color: #3b82f6; }
-
-/* topic-card.plsql styles */
-.topic-card.plsql:hover .progress-line { background: #f97316; } /* Orange for PL/SQL */
-.topic-card.plsql .arrow { color: #f97316; }
-
-/* Scrollbar and Sidebar */
-.sidebar {
+#problemList li:hover {
     background: #ffffff;
-    border-right: 1px solid #e2e8f0;
-    width: 300px;
+    color: var(--accent-color);
+    padding-left: 18px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
-.query-list {
-    overflow-y: scroll;
-    height: calc(100vh - 120px);
+/* --- DISPLAY AREA --- */
+.main-display {
+    flex: 1;
+    padding: 50px;
+    background: white;
+    overflow-y: auto;
 }
 
-.query-item {
-    border-left: 3px solid transparent;
+.q-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    display: block;
 }
 
-.query-item.active {
-    background: #f8fafc;
-    border-left: 3px solid var(--accent);
+.code-box, .output-box {
+    background: #fdfdfd;
+    border: 1px solid var(--border-color);
+    padding: 25px;
+    border-radius: 10px;
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-top: 15px;
+    position: relative;
+}
+
+.output-box {
+    background: #ffffff;
+}
+
+/* --- TABLES --- */
+.oracle-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.oracle-table th {
+    background-color: #f8f9fa;
+    color: #555;
+    text-align: left;
+    padding: 12px;
+    border-bottom: 2px solid var(--border-color);
+    font-weight: 700;
+}
+
+.oracle-table td {
+    padding: 10px 12px;
+    border-bottom: 1px solid #f1f1f1;
+    color: #444;
+}
+
+.oracle-table tr:hover {
+    background-color: #fcfcfc;
 }
