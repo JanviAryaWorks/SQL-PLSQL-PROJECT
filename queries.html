@@ -1,57 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Problems - Janvi Arya Works</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
-    <title>Queries Explorer | SQLMaster</title>
 </head>
-<body class="query-page">
+
+<body>
 
     <nav class="navbar">
-        <div class="logo"><a href="index.html" style="text-decoration:none; color:inherit;">SQL<span>Master</span></a></div>
-        <div class="category-badge" id="current-category">Category Name</div>
+        <div class="logo">Janvi Arya Works</div>
         <div class="nav-links">
-            <a href="index.html">← Back to Home</a>
+            <a href="index.html"> Back to Home</a>
         </div>
     </nav>
 
-    <div class="split-container">
+    <div class="practice-container">
         <aside class="sidebar">
-            <div class="sidebar-header">
-                <h4>Practice Problems</h4>
-                <p id="query-count">0 Queries</p>
-            </div>
-            <div id="query-list" class="query-list">
-                </div>
+            <h3 id="catTitle">Problems</h3>
+            <ul id="problemList">
+            </ul>
         </aside>
 
-        <main class="content-area">
-            <div id="welcome-screen" class="empty-state">
-                <div class="icon">🔍</div>
-                <h2>Select a query to view details</h2>
-                <p>Choose any problem from the left sidebar to see the SQL code and Oracle output.</p>
+        <main class="main-display">
+            <div id="welcomeMsg">
+                <h2>Welcome!</h2>
+                <p>Please select a problem from the left sidebar to view the solution.</p>
             </div>
 
-            <div id="detail-view" class="detail-container hidden">
-                <div class="question-box">
-                    <span class="label">QUESTION</span>
-                    <h2 id="display-question">Problem Statement</h2>
+            <div id="contentBox" style="display: none;">
+                <div class="display-section">
+                    <label>QUESTION</label>
+                    <p id="problemQuestion" class="q-text"></p>
                 </div>
 
-                <div class="code-wrapper">
-                    <div class="panel-header">
-                        <span>SQL/PLSQL QUERY</span>
-                        <button onclick="copyCode()">Copy</button>
+                <div class="display-section">
+                    <label>SQL / PLSQL CODE</label>
+                    <div class="code-box">
+                        <pre id="queryDisplay"></pre>
                     </div>
-                    <pre><code id="display-query">-- Query will appear here</code></pre>
                 </div>
 
-                <div class="output-wrapper">
-                    <div class="panel-header">ORACLE OUTPUT</div>
-                    <div id="display-output" class="output-screen">
-                        </div>
+                <div class="display-section">
+                    <label>ORACLE OUTPUT</label>
+                    <pre id="outputDisplay" class="output-box"></pre>
                 </div>
             </div>
         </main>
@@ -59,4 +53,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>
